@@ -1,0 +1,6 @@
+instruction_id,patient_id,version,title,instruction_text,source_type,source_label,verification_status,effective_from,supersedes_instruction_id,reviewed_by,demo_record
+INS-001,DEMO-001,1,Example daily care instruction,Fictional demonstration instruction. Refer to the authorised source record for actual care decisions.,demo_document,Synthetic sample record,verified_demo,2026-11-01,,DEMO-REVIEWER-01,True
+INS-002,DEMO-001,1,Example medication-related instruction,Fictional instruction awaiting authorised human review. Do not use as medical guidance.,demo_note,Synthetic sample note,pending_review,2026-11-10,,,True
+INS-003,DEMO-002,1,Incomplete source instruction,Source details intentionally incomplete to demonstrate a review-needed state.,unknown,Not supplied,unverified,2026-11-05,,,True
+INS-004,DEMO-003,1,Example mobility support instruction,Fictional support note for demonstration only.,demo_document,Synthetic sample record,verified_demo,2026-11-03,,DEMO-REVIEWER-02,True
+INS-006,DEMO-005,1,Example care instruction,Fictional instruction for testing provenance and linked records.,demo_document,Synthetic sample record,verified_demo,2026-11-02,,DEMO-REVIEWER-03,True

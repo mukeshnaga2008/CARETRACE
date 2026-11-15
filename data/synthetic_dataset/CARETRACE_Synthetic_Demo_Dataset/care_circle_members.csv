@@ -1,0 +1,7 @@
+member_id,patient_id,display_name,relationship,role,email,membership_status,permissions,demo_record
+MEM-001,DEMO-001,David Sullivan,Son,family_member,david.demo@example.test,active,view_profile;view_medications;coordinate_tasks,True
+MEM-002,DEMO-001,Sarah Jenkins,Caregiver,caregiver,sarah.demo@example.test,active,view_assigned_tasks;acknowledge_handover;report_medication_event,True
+MEM-003,DEMO-002,Helen Bennett,Daughter,family_member,helen.demo@example.test,active,view_profile;view_appointments;coordinate_tasks,True
+MEM-004,DEMO-003,Kavitha Raman,Daughter,family_member,kavitha.demo@example.test,active,view_profile;view_medications;coordinate_tasks,True
+MEM-005,DEMO-004,Michael Carter,Son,family_member,michael.demo@example.test,active,view_profile;view_appointments;coordinate_tasks,True
+MEM-006,DEMO-005,Meena Narayanan,Daughter,family_member,meena.demo@example.test,active,view_profile;view_medications;coordinate_tasks,True

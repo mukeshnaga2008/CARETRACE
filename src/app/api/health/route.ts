@@ -1,0 +1,13 @@
+import { NextResponse } from 'next/server';
+import { APP_NAME, APP_VERSION } from '@/lib/constants';
+
+export async function GET() {
+  return NextResponse.json({
+    status: 'healthy',
+    application: APP_NAME,
+    version: APP_VERSION,
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development',
+    demoMode: process.env.NEXT_PUBLIC_DEMO_MODE === 'true',
+  });
+}

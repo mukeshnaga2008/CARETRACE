@@ -1,0 +1,6 @@
+patient_id,full_name,date_of_birth,preferred_name,timezone,preferred_language,emergency_contact_name,emergency_contact_relationship,emergency_contact_phone,demo_record
+DEMO-001,Margaret Sullivan,1942-04-18,Margaret,Asia/Kolkata,English,David Sullivan,Son,+91-9000000001,True
+DEMO-002,Arthur Bennett,1938-11-02,Arthur,Asia/Kolkata,English,Helen Bennett,Daughter,+91-9000000002,True
+DEMO-003,Leela Raman,1945-07-23,Leela,Asia/Kolkata,Tamil,Kavitha Raman,Daughter,+91-9000000003,True
+DEMO-004,Josephine Carter,1940-01-09,Josie,Asia/Kolkata,English,Michael Carter,Son,+91-9000000004,True
+DEMO-005,Ravi Narayanan,1943-09-14,Ravi,Asia/Kolkata,Tamil,Meena Narayanan,Daughter,+91-9000000005,True

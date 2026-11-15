@@ -1,0 +1,6 @@
+event_id,patient_id,medication_id,scheduled_at,status,reported_by_member_id,notes,demo_record
+EVT-001,DEMO-001,MED-001,2026-11-15T08:00:00+05:30,reported_taken,MEM-002,Fictional demo event; user-reported only,True
+EVT-002,DEMO-001,MED-002,2026-11-15T20:00:00+05:30,upcoming,,Fictional upcoming event,True
+EVT-003,DEMO-002,MED-003,2026-11-15T09:00:00+05:30,awaiting_confirmation,,Needs authorised confirmation; no clinical inference,True
+EVT-004,DEMO-003,MED-004,2026-11-15T14:00:00+05:30,skipped_reported,MEM-004,Fictional user-reported event,True
+EVT-005,DEMO-005,MED-006,2026-11-15T08:30:00+05:30,missed_unconfirmed,,Unconfirmed status for demonstration,True

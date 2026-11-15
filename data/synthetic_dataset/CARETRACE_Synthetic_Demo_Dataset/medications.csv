@@ -1,0 +1,7 @@
+medication_id,patient_id,display_name,strength,form,schedule_text,source_instruction_id,verification_status,record_status,demo_record
+MED-001,DEMO-001,Example medicine A,As recorded in fictional care plan,tablet,"Morning, according to fictional record",INS-001,verified_demo,active,True
+MED-002,DEMO-001,Example medicine B,As recorded in fictional care plan,capsule,"Evening, according to fictional record",INS-002,pending_review,active,True
+MED-003,DEMO-002,Example medicine C,Not specified in demo,tablet,Schedule not supplied,INS-003,unverified,needs_review,True
+MED-004,DEMO-003,Example medicine D,As recorded in fictional care plan,liquid,"Afternoon, according to fictional record",INS-004,verified_demo,active,True
+MED-005,DEMO-004,Example medicine E,Not specified in demo,tablet,Schedule not supplied,,pending_review,needs_review,True
+MED-006,DEMO-005,Example medicine F,As recorded in fictional care plan,tablet,"Morning, according to fictional record",INS-006,verified_demo,active,True

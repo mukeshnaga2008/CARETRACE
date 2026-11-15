@@ -1,0 +1,4 @@
+gap_id,patient_id,gap_type,title,description,detected_at,status,priority,related_record_type,related_record_id,assigned_to_member_id,demo_record
+GAP-001,DEMO-001,instruction_review_pending,Care instruction awaiting review,INS-002 has a pending review status.,2026-11-15T09:05:00+05:30,open,normal,care_instruction,INS-002,MEM-001,True
+GAP-002,DEMO-002,source_information_incomplete,Care instruction source incomplete,INS-003 has incomplete source information and needs review.,2026-11-15T09:10:00+05:30,open,normal,care_instruction,INS-003,MEM-003,True
+GAP-003,DEMO-005,medication_event_unconfirmed,Medication event unconfirmed,A fictional event has not been confirmed; this is not a clinical severity assessment.,2026-11-15T09:15:00+05:30,open,normal,medication_event,EVT-005,MEM-006,True

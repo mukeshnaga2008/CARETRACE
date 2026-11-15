@@ -1,0 +1,4 @@
+notification_id,patient_id,recipient_member_id,category,title,message,created_at,status,channel,demo_record
+NOT-001,DEMO-001,MEM-001,instruction_review,Instruction review pending,A fictional care instruction is awaiting authorised review.,2026-11-15T09:00:00+05:30,unread,in_app,True
+NOT-002,DEMO-001,MEM-002,appointment_reminder,Upcoming appointment,A fictional appointment is scheduled soon.,2026-11-15T10:00:00+05:30,unread,in_app,True
+NOT-003,DEMO-003,MEM-004,task_reminder,Care task awaiting acknowledgement,A fictional care task is awaiting acknowledgement.,2026-11-15T11:00:00+05:30,read,in_app,True

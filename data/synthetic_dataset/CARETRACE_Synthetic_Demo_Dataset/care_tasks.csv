@@ -1,0 +1,5 @@
+task_id,patient_id,title,description,assigned_to_member_id,due_at,status,priority,related_instruction_id,demo_record
+TASK-001,DEMO-001,Confirm pending instruction review,Review the source and verification status of INS-002.,MEM-001,2026-11-16T12:00:00+05:30,pending,normal,INS-002,True
+TASK-002,DEMO-001,Prepare for geriatric assessment,Gather permitted care summary and appointment questions.,MEM-002,2026-11-17T18:00:00+05:30,in_progress,normal,INS-001,True
+TASK-003,DEMO-002,Confirm appointment details,Verify the appointment with the fictional clinic contact.,MEM-003,2026-11-18T17:00:00+05:30,pending,normal,,True
+TASK-004,DEMO-003,Acknowledge care handover,Review and acknowledge the fictional shift handover.,MEM-004,2026-11-15T19:00:00+05:30,pending,normal,INS-004,True

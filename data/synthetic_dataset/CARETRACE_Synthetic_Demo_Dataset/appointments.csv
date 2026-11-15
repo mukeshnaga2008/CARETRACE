@@ -1,0 +1,5 @@
+appointment_id,patient_id,title,provider_name,clinic_name,starts_at,duration_minutes,status,category,preparation_notes,demo_record
+APT-001,DEMO-001,Annual Geriatric Wellness & Cognitive Assessment,Dr. Robert Chen (fictional),St. Jude Geriatric & Primary Care (fictional),2026-11-18T10:00:00+05:30,60,confirmed,consultation,Bring the current care summary and questions for the clinician.,True
+APT-002,DEMO-001,Physiotherapy Follow-up,Alex Morgan (fictional),Community Mobility Centre (fictional),2026-11-21T11:30:00+05:30,30,scheduled,physical_therapy,Review the existing exercise plan with the treating professional.,True
+APT-003,DEMO-002,Routine Care Review,Dr. Priya Shah (fictional),Northside Family Clinic (fictional),2026-11-19T09:30:00+05:30,30,needs_confirmation,consultation,Confirm appointment details with the clinic.,True
+APT-004,DEMO-003,Follow-up Visit,Dr. Ananya Iyer (fictional),Riverside Health Centre (fictional),2026-11-24T15:00:00+05:30,45,confirmed,follow_up,Bring the latest verified instruction record.,True

@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* CARETRACE System Palette Tokens */
+  --color-primary: #123C43;
+  --color-secondary: #247C78;
+  --color-mint: #E8F4EF;
+  --color-bg-warm: #F7F8F5;
+  --color-surface-white: #FFFFFF;
+  --color-text-main: #172B2B;
+  --color-text-secondary: #627270;
+  --color-border-subtle: #E2E9E5;
+  --color-focus: #247C78;
+
+  /* Aliases used across features and tabs */
+  --primary-teal: #123C43;
+  --secondary-teal: #247C78;
+  --subtle-border: #E2E9E5;
+  --white-surface: #FFFFFF;
+  --main-text: #172B2B;
+  --secondary-text: #627270;
+  --soft-mint: #E8F4EF;
+  --card-background: #FFFFFF;
+  --canvas-background: #F7F8F5;
+
+  --font-scale-multiplier: 1;
+}
+
+/* Dark Mode Tokens (Default System Theme) */
+.dark {
+  --color-primary: #14B8A6;
+  --color-secondary: #2DD4BF;
+  --color-mint: #132E2B;
+  --color-bg-warm: #0B132B;
+  --color-surface-white: #151F38;
+  --color-text-main: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-border-subtle: #24324F;
+  --color-focus: #14B8A6;
+
+  /* Aliases used across features and tabs in Dark Mode */
+  --primary-teal: #14B8A6;
+  --secondary-teal: #2DD4BF;
+  --subtle-border: #24324F;
+  --white-surface: #151F38;
+  --main-text: #F8FAFC;
+  --secondary-text: #94A3B8;
+  --soft-mint: #132E2B;
+  --card-background: #151F38;
+  --canvas-background: #0B132B;
+}
+
+.dark body {
+  background-color: #0B132B !important;
+  color: #F8FAFC !important;
+}
+
+.dark .bg-canvas-background {
+  background-color: #0B132B !important;
+}
+
+.dark .bg-white,
+.dark .bg-canvas-surface {
+  background-color: #151F38 !important;
+  color: #F8FAFC !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: #0B132B !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #1C2742 !important;
+}
+
+.dark .bg-slate-200 {
+  background-color: #24324F !important;
+}
+
+.dark .border-subtleBorder,
+.dark .border-slate-200,
+.dark .border-slate-100 {
+  border-color: #24324F !important;
+}
+
+.dark .text-main,
+.dark .text-slate-900,
+.dark .text-slate-800 {
+  color: #F1F5F9 !important;
+}
+
+.dark .text-secondaryText,
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #94A3B8 !important;
+}
+
+.dark .text-mutedText,
+.dark .text-slate-400 {
+  color: #64748B !important;
+}
+
+.dark .bg-mint {
+  background-color: #132E2B !important;
+  color: #34D399 !important;
+}
+
+.dark .border-mint-border {
+  border-color: #065F46 !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #18223D !important;
+  color: #F8FAFC !important;
+  border-color: #2E3E61 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #64748B !important;
+}
+
+.dark header {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: #24324F !important;
+}
+
+.dark aside {
+  background-color: #151F38 !important;
+  border-color: #24324F !important;
+}
+
+.dark footer {
+  background-color: #0F172A !important;
+  border-color: #24324F !important;
+}
+
+.dark nav[aria-label="Mobile quick navigation"] {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: #24324F !important;
+}
+
+/* High Contrast Mode for Low-Vision Accessibility */
+.high-contrast {
+  --color-primary: #000000;
+  --color-secondary: #005F73;
+  --color-mint: #FFFFFF;
+  --color-bg-warm: #000000;
+  --color-surface-white: #111111;
+  --color-text-main: #FFFFFF;
+  --color-text-secondary: #E2E8F0;
+  --color-border-subtle: #FFFFFF;
+  --color-focus: #F59E0B;
+}
+
+.high-contrast body {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.high-contrast .bg-canvas-surface,
+.high-contrast .bg-white {
+  background-color: #121212 !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+.high-contrast .text-secondaryText,
+.high-contrast .text-mutedText,
+.high-contrast .text-slate-500,
+.high-contrast .text-slate-600 {
+  color: #E2E8F0 !important;
+}
+
+/* Elder Accessibility Font Scale Tiers */
+body.font-scale-standard {
+  font-size: 1rem;
+}
+
+body.font-scale-large {
+  font-size: 1.125rem;
+}
+
+body.font-scale-extra-large {
+  font-size: 1.25rem;
+}
+
+/* Minimum Accessible Touch Targets */
+.touch-target-min {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.touch-target-elder {
+  min-height: 54px;
+  min-width: 54px;
+}
+
+/* Keyboard Focus Indicators - 3px outline with offset */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: 3px solid #247C78 !important;
+  outline-offset: 3px !important;
+}
+
+/* Reduced Motion Preference Respect */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Print Styles for Clean Healthcare Passport PDF Generation */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+}
