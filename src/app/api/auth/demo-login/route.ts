@@ -33,28 +33,87 @@ export async function POST(request: Request) {
     }
 
     const { role, patientId } = parseResult.data;
-    const cookieStore = await cookies();
     const maxAge = 60 * 60 * 24 * 7; // 7 days
     const activePatient = patientId || "DEMO-001";
 
-    // Set secure demo session cookies
-    cookieStore.set("caretrace_demo_role", role, {
-      httpOnly: false, // Accessible to client-side perspective switcher
+    const response = NextResponse.json({
+      success: true,
+      role,
+      patientId: activePatient,
+      message: `Signed in to demo evaluation session as ${role}`,
+    });
+
+    try {
+      const cookieStore = await cookies();
+      cookieStore.set("caretrace_demo_role", role, {
+        httpOnly: false,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        path: "/",
+        maxAge,
+      });
+      cookieStore.set("caretrace_session", `demo-active-${role}-${Date.now()}`, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        path: "/",
+        maxAge,
+      });
+      cookieStore.set("caretrace_user_name", DEMO_NAMES[role] || "Demo User", {
+        httpOnly: false,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        path: "/",
+        maxAge,
+      });
+      cookieStore.set("caretrace_user_email", `${role}@caretrace.health`, {
+        httpOnly: false,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        path: "/",
+        maxAge,
+      });
+      cookieStore.set("caretrace_active_patient", activePatient, {
+        httpOnly: false,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "lax",
+        path: "/",
+        maxAge,
+      });
+    } catch {
+      // Fallback to response.cookies
+    }
+
+    // Explicitly attach cookies to response object for serverless compatibility
+    response.cookies.set("caretrace_demo_role", role, {
+      httpOnly: false,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
       maxAge,
     });
-
-    cookieStore.set("caretrace_session", `demo-active-${role}-${Date.now()}`, {
+    response.cookies.set("caretrace_session", `demo-active-${role}-${Date.now()}`, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
       path: "/",
       maxAge,
     });
-
-    cookieStore.set("caretrace_user_name", DEMO_NAMES[role] || "Demo User", {
+    response.cookies.set("caretrace_user_name", DEMO_NAMES[role] || "Demo User", {
+      httpOnly: false,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge,
+    });
+    response.cookies.set("caretrace_user_email", `${role}@caretrace.health`, {
+      httpOnly: false,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge,
+    });
+    response.cookies.set("caretrace_active_patient", activePatient, {
       httpOnly: false,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
@@ -62,28 +121,7 @@ export async function POST(request: Request) {
       maxAge,
     });
 
-    cookieStore.set("caretrace_user_email", `${role}@caretrace.health`, {
-      httpOnly: false,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      path: "/",
-      maxAge,
-    });
-
-    cookieStore.set("caretrace_active_patient", activePatient, {
-      httpOnly: false,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      path: "/",
-      maxAge,
-    });
-
-    return NextResponse.json({
-      success: true,
-      role,
-      patientId: activePatient,
-      message: `Signed in to demo evaluation session as ${role}`,
-    });
+    return response;
   } catch {
     return NextResponse.json(
       { error: "Failed to establish demo session" },
